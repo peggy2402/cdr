@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ đề trắc nghiệm tổng hợp</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --correct-color: #2ecc71;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: var(--dark-color);
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+        
+        .topic {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
+            background-color: #f9f9f9;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .question-number {
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-right: 10px;
+        }
+        
+        .options {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        .option {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .correct {
+            font-weight: bold;
+            color: var(--correct-color);
+        }
+        
+        .option:before {
+            content: "○";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        .correct:before {
+            content: "●";
+            color: var(--correct-color);
+        }
+        
+        .topic-nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            max-height: 80vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        .topic-nav h4 {
+            margin-top: 0;
+            color: var(--dark-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .topic-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .topic-nav li {
+            margin-bottom: 5px;
+        }
+        
+        .topic-nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.2s;
+        }
+        
+        .topic-nav a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--dark-color);
+            color: white;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .topic-nav {
+                position: static;
+                margin-bottom: 30px;
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bộ đề trắc nghiệm tổng hợp</h1>
+            <p>Ôn tập kiến thức đa dạng các chủ đề</p>
+        </header>
+
+        <div class="topic-nav">
+            <h4>Danh mục chủ đề</h4>
+            <ul>
+                <li><a href="#topic1">Chủ đề 1: Triết học & Kinh tế thị trường</a></li>
+                <li><a href="#topic2">Chủ đề 2: Sứ mệnh giai cấp công nhân & Pháp luật</a></li>
+                <li><a href="#topic3">Chủ đề 3: Toán, xác suất & thống kê</a></li>
+                <li><a href="#topic4">Chủ đề 4: Vật lý kỹ thuật</a></li>
+                <li><a href="#topic5">Chủ đề 5: Cấu trúc dữ liệu & thuật toán</a></li>
+                <li><a href="#topic6">Chủ đề 6: Hệ điều hành & mạng máy tính</a></li>
+                <li><a href="#topic7">Chủ đề 7: Lập trình hướng đối tượng</a></li>
+                <li><a href="#topic8">Chủ đề 8: Cơ sở dữ liệu</a></li>
+                <li><a href="#topic9">Chủ đề 9: Mạng & bảo mật</a></li>
+                <li><a href="#topic10">Chủ đề 10: Phân tích & thiết kế hệ thống</a></li>
+                <li><a href="#topic11">Chủ đề 11: Phát triển ứng dụng .NET/Java</a></li>
+                <li><a href="#topic12">Chủ đề 12: Thiết kế Web & ứng dụng di động</a></li>
+                <li><a href="#topic13">Chủ đề 13: AI, IoT, AIoT</a></li>
+                <li><a href="#topic14">Chủ đề 14: Giải quyết vấn đề thực tiễn</a></li>
+                <li><a href="#topic15">Chủ đề 15: Triển khai hệ thống thực tế</a></li>
+                <li><a href="#topic16">Chủ đề 16: Đọc hiểu & giao tiếp kỹ thuật</a></li>
+                <li><a href="#topic17">Chủ đề 17: Làm việc nhóm & Agile</a></li>
+                <li><a href="#topic18">Chủ đề 18: Tự học & phát triển nghề nghiệp</a></li>
+                <li><a href="#topic19">Chủ đề 19: Tư duy sáng tạo & công nghệ mới</a></li>
+                <li><a href="#topic20">Chủ đề 20: Đạo đức nghề nghiệp & pháp luật</a></li>
+                <li><a href="#topic21">Chủ đề 21: Sáng tạo & cải tiến công việc</a></li>
+                <li><a href="#topic22">Chủ đề 22: Đạo đức & trách nhiệm nghề nghiệp</a></li>
+                <li><a href="#topic23">Chủ đề 23: Lập kế hoạch & Agile</a></li>
+                <li><a href="#topic24">Chủ đề 24: Làm việc nhóm & Scrum</a></li>
+                <li><a href="#topic25">Chủ đề 25: Kỷ luật & phong cách chuyên nghiệp</a></li>
+            </ul>
+        </div>
+
+        <!-- Chủ đề 1 -->
+        <div class="topic" id="topic1">
+            <h2>CHỦ ĐỀ 1: Những nội dung cơ bản về chủ nghĩa duy vật biện chứng và chủ nghĩa duy vật lịch sử; ý nghĩa trong kinh tế thị trường ở Việt Nam hiện nay</h2>
+            
+            <h3>I. Câu hỏi trắc nghiệm</h3>
+            
+            <div class="question">
+                <div class="question-number">1.</div>
+                <div class="question-text">Quy luật lượng - chất phản ánh mối quan hệ giữa:</div>
+                <div class="options">
+                    <div class="option">A. Chất và thời gian</div>
+                    <div class="option correct">B. Lượng và chất</div>
+                    <div class="option">C. Không gian và vật chất</div>
+                    <div class="option">D. Hình thức và nội dung</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">2.</div>
+                <div class="question-text">Theo chủ nghĩa duy vật biện chứng, chất là:</div>
+                <div class="options">
+                    <div class="option">A. Khối lượng vật thể</div>
+                    <div class="option correct">B. Tổng hợp những thuộc tính cơ bản quy định sự vật</div>
+                    <div class="option">C. Những gì có thể thấy bằng mắt</div>
+                    <div class="option">D. Những gì tồn tại vĩnh viễn</div>
+                </div>
+            </div>
+            
+            <!-- Thêm các câu hỏi tiếp theo tương tự -->
+            <div class="question">
+                <div class="question-number">3.</div>
+                <div class="question-text">Quy luật nào giải thích sự biến đổi về chất khi lượng thay đổi đủ lớn?</div>
+                <div class="options">
+                    <div class="option">A. Quy luật giá trị thặng dư</div>
+                    <div class="option correct">B. Quy luật chuyển hóa từ lượng thành chất</div>
+                    <div class="option">C. Quy luật phủ định</div>
+                    <div class="option">D. Quy luật mâu thuẫn</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">4.</div>
+                <div class="question-text">Theo Lênin, vật chất là:</div>
+                <div class="options">
+                    <div class="option">A. Mọi thứ tồn tại</div>
+                    <div class="option correct">B. Phạm trù triết học chỉ thực tại khách quan</div>
+                    <div class="option">C. Các yếu tố có khối lượng</div>
+                    <div class="option">D. Những gì nhìn thấy được</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">5.</div>
+                <div class="question-text">Sản xuất hàng hóa là sự thống nhất giữa:</div>
+                <div class="options">
+                    <div class="option">A. Người bán và người mua</div>
+                    <div class="option correct">B. Lực lượng sản xuất và quan hệ sản xuất</div>
+                    <div class="option">C. Tư bản và lao động</div>
+                    <div class="option">D. Giá cả và giá trị</div>
+                </div>
+            </div>
+            
+            <!-- Tiếp tục thêm các câu hỏi còn lại của chủ đề 1 -->
+        </div>
+
+        <!-- Chủ đề 2 -->
+        <div class="topic" id="topic2">
+            <h2>CHỦ ĐỀ 2: Sứ mệnh lịch sử của giai cấp công nhân Việt Nam và các quy định cơ bản của pháp luật</h2>
+            
+            <h3>I. Câu hỏi trắc nghiệm</h3>
+            
+            <div class="question">
+                <div class="question-number">1.</div>
+                <div class="question-text">Sứ mệnh lịch sử của giai cấp công nhân là:</div>
+                <div class="options">
+                    <div class="option">A. Tham gia vào hoạt động sản xuất</div>
+                    <div class="option correct">B. Xóa bỏ chế độ bóc lột và xây dựng xã hội không có giai cấp</div>
+                    <div class="option">C. Lãnh đạo các doanh nghiệp lớn</div>
+                    <div class="option">D. Tăng trưởng GDP quốc gia</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">2.</div>
+                <div class="question-text">Giai cấp công nhân Việt Nam giữ vai trò lãnh đạo vì:</div>
+                <div class="options">
+                    <div class="option">A. Có trình độ học vấn cao</div>
+                    <div class="option correct">B. Là lực lượng tiên tiến, đại diện cho phương thức sản xuất hiện đại</div>
+                    <div class="option">C. Sống chủ yếu ở thành thị</div>
+                    <div class="option">D. Chiếm số đông trong dân cư</div>
+                </div>
+            </div>
+            
+            <!-- Thêm các câu hỏi tiếp theo tương tự -->
+        </div>
+
+        <!-- Tiếp tục thêm các chủ đề khác theo cùng cấu trúc -->
+
+        <footer>
+            <p>© 2023 Bộ đề trắc nghiệm tổng hợp | Thiết kế bởi [Your Name]</p>
+        </footer>
+    </div>
+
+    <script>
+        // Script để làm mượt khi cuộn đến các phần
+        document.querySelectorAll('.topic-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
