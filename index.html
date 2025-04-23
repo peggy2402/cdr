@@ -3,327 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bộ đề trắc nghiệm tổng hợp</title>
+    <title>Câu hỏi Truyền thông Đa phương tiện</title>
     <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2980b9;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --correct-color: #2ecc71;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
             margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
             padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
         }
-        
-        header {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            margin-bottom: 30px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
         h1 {
-            margin: 0;
-            font-size: 2.2em;
+            text-align: center;
+            color: #35424a;
         }
-        
-        h2 {
-            color: var(--secondary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 5px;
-            margin-top: 40px;
-            font-size: 1.8em;
-        }
-        
-        h3 {
-            color: var(--dark-color);
-            margin-top: 30px;
-            font-size: 1.4em;
-        }
-        
-        .topic {
-            background-color: white;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .question {
-            margin-bottom: 20px;
+        .question-container {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             padding: 15px;
-            border-left: 4px solid var(--primary-color);
-            background-color: #f9f9f9;
-            border-radius: 0 5px 5px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
-        .question-number {
+        .question {
             font-weight: bold;
-            color: var(--dark-color);
-            margin-right: 10px;
+            color: #e8491d;
+            margin-bottom: 10px;
         }
-        
         .options {
-            margin-top: 10px;
             margin-left: 20px;
         }
-        
         .option {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 25px;
+            padding: 5px 0;
         }
-        
         .correct {
+            color: #2e7d32;
             font-weight: bold;
-            color: var(--correct-color);
         }
-        
-        .option:before {
-            content: "○";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-        }
-        
-        .correct:before {
-            content: "●";
-            color: var(--correct-color);
-        }
-        
-        .topic-nav {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            max-height: 80vh;
-            overflow-y: auto;
-            z-index: 1000;
-        }
-        
-        .topic-nav h4 {
-            margin-top: 0;
-            color: var(--dark-color);
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        
-        .topic-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .topic-nav li {
-            margin-bottom: 5px;
-        }
-        
-        .topic-nav a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9em;
-            transition: color 0.2s;
-        }
-        
-        .topic-nav a:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            background-color: var(--dark-color);
-            color: white;
-            border-radius: 5px;
-        }
-        
-        @media (max-width: 768px) {
-            .topic-nav {
-                position: static;
-                margin-bottom: 30px;
-                max-height: none;
-            }
+        .correct::before {
+            content: "✓ ";
+            color: #4caf50;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bộ đề trắc nghiệm tổng hợp</h1>
-            <p>Ôn tập kiến thức đa dạng các chủ đề</p>
-        </header>
+    <h1>CÂU HỎI TRẮC NGHIỆM PHẦN 1</h1>
 
-        <div class="topic-nav">
-            <h4>Danh mục chủ đề</h4>
-            <ul>
-                <li><a href="#topic1">Chủ đề 1: Triết học & Kinh tế thị trường</a></li>
-                <li><a href="#topic2">Chủ đề 2: Sứ mệnh giai cấp công nhân & Pháp luật</a></li>
-                <li><a href="#topic3">Chủ đề 3: Toán, xác suất & thống kê</a></li>
-                <li><a href="#topic4">Chủ đề 4: Vật lý kỹ thuật</a></li>
-                <li><a href="#topic5">Chủ đề 5: Cấu trúc dữ liệu & thuật toán</a></li>
-                <li><a href="#topic6">Chủ đề 6: Hệ điều hành & mạng máy tính</a></li>
-                <li><a href="#topic7">Chủ đề 7: Lập trình hướng đối tượng</a></li>
-                <li><a href="#topic8">Chủ đề 8: Cơ sở dữ liệu</a></li>
-                <li><a href="#topic9">Chủ đề 9: Mạng & bảo mật</a></li>
-                <li><a href="#topic10">Chủ đề 10: Phân tích & thiết kế hệ thống</a></li>
-                <li><a href="#topic11">Chủ đề 11: Phát triển ứng dụng .NET/Java</a></li>
-                <li><a href="#topic12">Chủ đề 12: Thiết kế Web & ứng dụng di động</a></li>
-                <li><a href="#topic13">Chủ đề 13: AI, IoT, AIoT</a></li>
-                <li><a href="#topic14">Chủ đề 14: Giải quyết vấn đề thực tiễn</a></li>
-                <li><a href="#topic15">Chủ đề 15: Triển khai hệ thống thực tế</a></li>
-                <li><a href="#topic16">Chủ đề 16: Đọc hiểu & giao tiếp kỹ thuật</a></li>
-                <li><a href="#topic17">Chủ đề 17: Làm việc nhóm & Agile</a></li>
-                <li><a href="#topic18">Chủ đề 18: Tự học & phát triển nghề nghiệp</a></li>
-                <li><a href="#topic19">Chủ đề 19: Tư duy sáng tạo & công nghệ mới</a></li>
-                <li><a href="#topic20">Chủ đề 20: Đạo đức nghề nghiệp & pháp luật</a></li>
-                <li><a href="#topic21">Chủ đề 21: Sáng tạo & cải tiến công việc</a></li>
-                <li><a href="#topic22">Chủ đề 22: Đạo đức & trách nhiệm nghề nghiệp</a></li>
-                <li><a href="#topic23">Chủ đề 23: Lập kế hoạch & Agile</a></li>
-                <li><a href="#topic24">Chủ đề 24: Làm việc nhóm & Scrum</a></li>
-                <li><a href="#topic25">Chủ đề 25: Kỷ luật & phong cách chuyên nghiệp</a></li>
-            </ul>
+    <!-- Câu 1 -->
+    <div class="question-container">
+        <div class="question">Câu 1: Trong môn học "Truyền thông đa phương tiện", người ta định nghĩa hệ thống đa phương tiện là hệ thống có khả năng thao tác ít nhất bao nhiêu phương tiện động (dynamic media)?</div>
+        <div class="options">
+            <div class="option correct">Hai phương tiện động</div>
+            <div class="option">Một phương tiện động</div>
+            <div class="option">Không phương tiện động</div>
+            <div class="option">Ba phương tiện động</div>
         </div>
-
-        <!-- Chủ đề 1 -->
-        <div class="topic" id="topic1">
-            <h2>CHỦ ĐỀ 1: Những nội dung cơ bản về chủ nghĩa duy vật biện chứng và chủ nghĩa duy vật lịch sử; ý nghĩa trong kinh tế thị trường ở Việt Nam hiện nay</h2>
-            
-            <h3>I. Câu hỏi trắc nghiệm</h3>
-            
-            <div class="question">
-                <div class="question-number">1.</div>
-                <div class="question-text">Quy luật lượng - chất phản ánh mối quan hệ giữa:</div>
-                <div class="options">
-                    <div class="option">A. Chất và thời gian</div>
-                    <div class="option correct">B. Lượng và chất</div>
-                    <div class="option">C. Không gian và vật chất</div>
-                    <div class="option">D. Hình thức và nội dung</div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <div class="question-number">2.</div>
-                <div class="question-text">Theo chủ nghĩa duy vật biện chứng, chất là:</div>
-                <div class="options">
-                    <div class="option">A. Khối lượng vật thể</div>
-                    <div class="option correct">B. Tổng hợp những thuộc tính cơ bản quy định sự vật</div>
-                    <div class="option">C. Những gì có thể thấy bằng mắt</div>
-                    <div class="option">D. Những gì tồn tại vĩnh viễn</div>
-                </div>
-            </div>
-            
-            <!-- Thêm các câu hỏi tiếp theo tương tự -->
-            <div class="question">
-                <div class="question-number">3.</div>
-                <div class="question-text">Quy luật nào giải thích sự biến đổi về chất khi lượng thay đổi đủ lớn?</div>
-                <div class="options">
-                    <div class="option">A. Quy luật giá trị thặng dư</div>
-                    <div class="option correct">B. Quy luật chuyển hóa từ lượng thành chất</div>
-                    <div class="option">C. Quy luật phủ định</div>
-                    <div class="option">D. Quy luật mâu thuẫn</div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <div class="question-number">4.</div>
-                <div class="question-text">Theo Lênin, vật chất là:</div>
-                <div class="options">
-                    <div class="option">A. Mọi thứ tồn tại</div>
-                    <div class="option correct">B. Phạm trù triết học chỉ thực tại khách quan</div>
-                    <div class="option">C. Các yếu tố có khối lượng</div>
-                    <div class="option">D. Những gì nhìn thấy được</div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <div class="question-number">5.</div>
-                <div class="question-text">Sản xuất hàng hóa là sự thống nhất giữa:</div>
-                <div class="options">
-                    <div class="option">A. Người bán và người mua</div>
-                    <div class="option correct">B. Lực lượng sản xuất và quan hệ sản xuất</div>
-                    <div class="option">C. Tư bản và lao động</div>
-                    <div class="option">D. Giá cả và giá trị</div>
-                </div>
-            </div>
-            
-            <!-- Tiếp tục thêm các câu hỏi còn lại của chủ đề 1 -->
-        </div>
-
-        <!-- Chủ đề 2 -->
-        <div class="topic" id="topic2">
-            <h2>CHỦ ĐỀ 2: Sứ mệnh lịch sử của giai cấp công nhân Việt Nam và các quy định cơ bản của pháp luật</h2>
-            
-            <h3>I. Câu hỏi trắc nghiệm</h3>
-            
-            <div class="question">
-                <div class="question-number">1.</div>
-                <div class="question-text">Sứ mệnh lịch sử của giai cấp công nhân là:</div>
-                <div class="options">
-                    <div class="option">A. Tham gia vào hoạt động sản xuất</div>
-                    <div class="option correct">B. Xóa bỏ chế độ bóc lột và xây dựng xã hội không có giai cấp</div>
-                    <div class="option">C. Lãnh đạo các doanh nghiệp lớn</div>
-                    <div class="option">D. Tăng trưởng GDP quốc gia</div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <div class="question-number">2.</div>
-                <div class="question-text">Giai cấp công nhân Việt Nam giữ vai trò lãnh đạo vì:</div>
-                <div class="options">
-                    <div class="option">A. Có trình độ học vấn cao</div>
-                    <div class="option correct">B. Là lực lượng tiên tiến, đại diện cho phương thức sản xuất hiện đại</div>
-                    <div class="option">C. Sống chủ yếu ở thành thị</div>
-                    <div class="option">D. Chiếm số đông trong dân cư</div>
-                </div>
-            </div>
-            
-            <!-- Thêm các câu hỏi tiếp theo tương tự -->
-        </div>
-
-        <!-- Tiếp tục thêm các chủ đề khác theo cùng cấu trúc -->
-
-        <footer>
-            <p>© 2023 Bộ đề trắc nghiệm tổng hợp | Thiết kế bởi [Your Name]</p>
-        </footer>
     </div>
 
-    <script>
-        // Script để làm mượt khi cuộn đến các phần
-        document.querySelectorAll('.topic-nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 20,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- Câu 2 -->
+    <div class="question-container">
+        <div class="question">Câu 2: Hai mặt của truyền thông đa phương tiện là: Xử lý thông tin và truyền thông tin. Chức năng nào sau đây không phải là xử lý thông tin đa phương tiện?</div>
+        <div class="options">
+            <div class="option">Nhận dạng (recognition)</div>
+            <div class="option">Tìm kiếm (searching)</div>
+            <div class="option correct">Phục hồi (retrieval)</div>
+            <div class="option">Trình diễn (presentation)</div>
+        </div>
+    </div>
+
+    <!-- Câu 3 -->
+    <div class="question-container">
+        <div class="question">Câu 3: Công nghệ Multimedia là gì?</div>
+        <div class="options">
+            <div class="option">Là công nghệ dùng để xử lý tín hiệu</div>
+            <div class="option correct">Là công nghệ xử lý dữ liệu multimedia</div>
+            <div class="option">Là công nghệ truyền tải dữ liệu</div>
+        </div>
+    </div>
+
+    <!-- Câu 4 -->
+    <div class="question-container">
+        <div class="question">Câu 4: Đồng bộ (synchronic)?</div>
+        <div class="options">
+            <div class="option">Là khái niệm rất quan trọng trong xử lý dữ liệu</div>
+            <div class="option correct">Là khái niệm rất quan trọng trong công nghệ Multimedia</div>
+            <div class="option">Là khái niệm trong việc phát triển công nghệ</div>
+            <div class="option">Là khái niệm trong công nghệ và ứng dụng</div>
+        </div>
+    </div>
+
+    <!-- Câu 5 -->
+    <div class="question-container">
+        <div class="question">Câu 5: Dữ liệu nào không phải là dữ liệu đa phương tiện</div>
+        <div class="options">
+            <div class="option">Hình động</div>
+            <div class="option correct">Phần mềm chương trình</div>
+            <div class="option">Âm thanh</div>
+            <div class="option">Video</div>
+        </div>
+    </div>
+
+    <!-- Câu 6 -->
+    <div class="question-container">
+        <div class="question">Câu 6: Thuật ngữ đa phương tiện được đưa ra vào thời gian nào?</div>
+        <div class="options">
+            <div class="option">Năm có máy tính điện tử</div>
+            <div class="option">Năm 1990</div>
+            <div class="option">Năm 1965</div>
+            <div class="option correct">Trước năm 1960</div>
+        </div>
+    </div>
+
+    <!-- Câu 7 -->
+    <div class="question-container">
+        <div class="question">Câu 7: Dạng nào sau đây thuộc đồ họa trong Multimedia?</div>
+        <div class="options">
+            <div class="option">Audio (âm thanh động, có làn điệu)</div>
+            <div class="option">Văn bản</div>
+            <div class="option">Âm thanh (sound)</div>
+            <div class="option correct">Motion picture</div>
+        </div>
+    </div>
+
+    <!-- Câu 8 -->
+    <div class="question-container">
+        <div class="question">Câu 8: Bảng mầu (Color Palettes)</div>
+        <div class="options">
+            <div class="option">Là thanh công cụ trong phần mềm vẽ</div>
+            <div class="option">Bảng vẽ</div>
+            <div class="option">Là một phần trong PaintShopPRO</div>
+            <div class="option correct">Là các màu có thể dùng trong đồ họa</div>
+        </div>
+    </div>
+
+    <!-- Câu 9 -->
+    <div class="question-container">
+        <div class="question">Câu 9: Phòng thí nghiệm khổng lồ MIT Media Laboratory chuyên nghiên cứu về công nghệ Multimedia được thành lập năm nào?</div>
+        <div class="options">
+            <div class="option">Năm 1970</div>
+            <div class="option">Năm 1975</div>
+            <div class="option correct">Năm 1978</div>
+            <div class="option">Năm 1980</div>
+        </div>
+    </div>
+
+    <!-- Câu 10 -->
+    <div class="question-container">
+        <div class="question">Câu 10: Phòng thí nghiệm chuyên nghiên cứu về công nghệ Multimedia có tên là gì?</div>
+        <div class="options">
+            <div class="option correct">MIT Media Laboratory</div>
+            <div class="option">Media Lura</div>
+            <div class="option">Media Lura và Media Xacura</div>
+            <div class="option">Media Xacura</div>
+        </div>
+    </div>
+
+    <!-- Câu 11 -->
+    <div class="question-container">
+        <div class="question">Câu 11:  Hành động nào sau đây bị vi phạm quyền tác giả ?</div>
+        <div class="options">
+            <div class="option">Mua sắm, trao đổi, lựa chọn</div>
+            <div class="option">Đi du lịch, mua sắm, thanh toán</div>
+            <div class="option">Thanh toán, lựa chọn và sử dụng</div>
+            <div class="option correct">Sao chép, trích dẫn, trình diễn</div>
+        </div>
+    </div>
+    <!-- Câu 12 -->
+    <div class="question-container">
+        <div class="question">Câu 12:  Khái niệm nào sau đây là khái niệm đồng bộ (synchronic)?</div>
+        <div class="options">
+            <div class="option correct">Là khái niệm rất quan trọng trong công nghệ Multimedia</div>
+            <div class="option">Là khái niệm rất quan trọng trong việc thao tác dữ liệu</div>
+            <div class="option">Là khái niệm trong việc truyền đạt thông tin</div>
+            <div class="option">Là khái niệm trong việc lưu dữ và tìm kiếm dữ liệu</div>
+        </div>
+    </div>
+    <!-- Câu 13 -->
+    <div class="question-container">
+        <div class="question">Câu 13:  Ảnh vector  trong Multimedia thuộc dữ liệu dạng ở dạng thông tin nào?</div>
+        <div class="options">
+            <div class="option correct">Hình ảnh (image)</div>
+        </div>
+    </div>
+    <!-- Câu 14 -->
+    <div class="question-container">
+        <div class="question">Câu 14:  Khái niệm truyền thông đa phương tiện là gì?</div>
+        <div class="options">
+            <div class="option correct">Là tích hợp của văn bản, âm thanh, hình ảnh của tất cả các loại và phần mềm có điều khiển trong một môi trường thông tin số</div>
+        </div>
+    </div>
+    <!-- Câu 14 -->
+    <div class="question-container">
+        <div class="question">Câu 15:  Các màu thể hiện trong máy tính hiện nay là tổ hợp của mấy màu chính</div>
+        <div class="options">
+            <div class="option correct">3 màu chính Red – Green - Blue</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 16:  Ảnh bitmap có các định dạng file nào?</div>
+        <div class="options">
+            <div class="option correct">.GIF, JPEG</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 17:  Hệ thống xây dựng và soạn thảo video số được ứng dụng trong ?</div>
+        <div class="options">
+            <div class="option correct">Multimedia</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 18: Với kiểu đồ hoạ bitmap, lượng màu lớn nhất có thể đạt tới là?</div>
+        <div class="options">
+            <div class="option correct">2^24 =16777216 màu</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 19:  Bitmap?</div>
+        <div class="options">
+            <div class="option correct">Là bản đồ các bit</div>
+        </div>
+    </div>
+    <h1>CÂU HỎI TRẮC NGHIỆM PHẦN 2</h1>
+    <div class="question-container">
+        <div class="question">Câu 1:  Những sóng điện từ có bước sóng từ 380 nm đến 780 nm được gọi là</div>
+        <div class="options">
+            <div class="option correct">Ánh sáng</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 2:  Về nguyên tắc, có những loại nén dữ liệu nào</div>
+        <div class="options">
+            <div class="option correct">a. Nén tổn hao và nén không tổn hao</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 3: Độ sáng của vật phát sáng là bóng đèn TV trên 10m2 là 200 – 400 calenda, xác định độ chói?</div>
+        <div class="options">
+            <div class="option correct">c. 20 – 40</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 4: Độ chói của vật phát sáng là bóng đèn TV 60 – 80, xác định độ sáng trên 10 m2</div>
+        <div class="options">
+            <div class="option correct">a. 600 – 800 calenda</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 5:  Theo định lý lấy mẫu Shannon, với tần số tín hiệu cực đại là 20 thì tần số lấy mẫu bằng bao nhiêu</div>
+        <div class="options">
+            <div class="option correct">d. >=40</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 6:  Ưu điểm của âm thanh số so với hệ thống tương tự</div>
+        <div class="options">
+            <div class="option correct">d. Tất cả các ý trên</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+        Câu 7: Quá trình số hóa tín hiệu âm thanh bao gồm?</div>
+        <div class="options">
+            <div class="option correct">c. Lấy mẫu tín hiệu và giữ mức, lượng tử hóa và mã hóa</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 8:  Phát biểu nào sau đây là đúng</div>
+        <div class="options">
+            <div class="option correct">b. Tần số lấy mẫu càng cao thì chất lượng âm thanh khi phục hồi càng tốt</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 9:  Thế nào là lượng tử hóa</div>
+        <div class="options">
+            <div class="option correct">b. Là quá trình rời rạc hóa tín hiệu tương tự về biên độ</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 10:  Mã hóa kênh là gì?</div>
+        <div class="options">
+            <div class="option correct">a. Là quá trình chuyển các mức rời rạc của mỗi mẫu thành số nhị phân hoặc các hệ đếm khác và sắp xếp theo một quy luật nhất định</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 12:  Khái niệm nào sau đây là chính xác khi nói về quang thông?</div>
+        <div class="options">
+            <div class="option correct">d. Quang thông là đại lượng biểu thị phần công suất của bức xạ quang có tác dụng với mắt người qua một tiết diện nào đó.</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 13:  Đơn vị đo quang thông?</div>
+        <div class="options">
+            <div class="option correct">c. Lumen (lm)</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 14: Phát biểu nào sau đây là đúng về cường độ sáng?</div>
+        <div class="options">
+            <div class="option correct">c. Là quang thông của nguồn sáng bức xạ theo phương đã định, trong một đơn vị góc khối.</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 15: Đơn vị đo đường độ sáng?</div>
+        <div class="options">
+            <div class="option correct">a. Candela</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 15: Đơn vị đo đường độ sáng?</div>
+        <div class="options">
+            <div class="option correct">a. Candela</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 16:  Đại lượng nào đặc trưng cho nguồn sáng</div>
+        <div class="options">
+            <div class="option correct">a. Quang thông và độ sáng</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 17: Độ chói là gì?</div>
+        <div class="options">
+            <div class="option correct">c. Là đại lượng chỉ mức độ sáng của vật bức xạ ánh sáng, phản xạ ánh sáng hoặc cho ánh sáng đi qua</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+Câu 18: Đơn vị đo độ chói?</div>
+        <div class="options">
+            <div class="option correct">c. Nit</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+
+            Câu 19: Đơn vị tính độ rọi?</div>
+        <div class="options">
+            <div class="option correct">a. Lux (lx)</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+
+            Câu 20: Phát biểu nào đúng về độ bão hòa màu?</div>
+        <div class="options">
+            <div class="option correct">a. Là thông số chủ quan chỉ mức độ đậm nhạt của màu</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+
+            Câu 21: Phát biểu nào sau đây đúng về độ sạch màu</div>
+        <div class="options">
+            <div class="option correct">a. Là thông số khách quan chỉ hàm lượng tương đối của màu quang phổ chứa trong ánh sáng nào đó</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">          
+Câu 22: Nguyên lý chung của các phương pháp quét ảnh?</div>
+        <div class="options">
+            <div class="option correct">a. Quét từ trên xuống dưới, từ trái qua phải</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 23: Đặc điểm của phương pháp quét ảnh xen kẽ</div>
+        <div class="options">
+            <div class="option correct">d. Phù hợp với băng thông thấp</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 24: Đặc điểm của phương pháp quét ảnh liên tục</div>
+        <div class="options">
+            <div class="option correct">c. Chất lượng hình ảnh cao</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            
+Câu 25: Chuẩn nào không  phải là chuẩn của truyền hình</div>
+        <div class="options">
+            <div class="option correct">b. MPEG</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 26: Đặc điểm của hệ thống NTSC</div>
+        <div class="options">
+            <div class="option correct">c. Đơn giản, giá thành thấp hơn các thiết bị của các hệ thống khác</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            
+Câu 27: Đặc điểm của hệ truyền hình màu PAL</div>
+        <div class="options">
+            <div class="option correct">d. Tất cả các ý trên</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 28: Đặc điểm hệ truyền hình màu SECAM</div>
+        <div class="options">
+            <div class="option correct">d. Tất cả các ý trên</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            
+Câu 29:  Ưu điểm của những thiết bị làm việc với video số</div>
+        <div class="options">
+            <div class="option correct">d. Tất cả các ý trên</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 30:  Ngưỡng nghe được là?</div>
+        <div class="options">
+            <div class="option correct">a. Mức thanh áp nhỏ nhất mà tai người có thể cảm giác được sự tồn tại của nguồn âm</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 31: Ngưỡng nghe được phụ thuộc?</div>
+        <div class="options">
+            <div class="option correct">d. Tất cả các ý trên</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+            Câu 32: Ngưỡng chói tai?</div>
+        <div class="options">
+            <div class="option correct">a. Là mức thanh áp lớn nhất của đơn âm mà tai người còn chịu đựng được</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+            Câu 33: Hiệu ứng che lấp?</div>
+        <div class="options">
+            <div class="option correct">c. Là sự nâng cao ngưỡng nghe được đối với âm thanh xét khi có mặt âm thanh nhiễu</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">Câu 36: Các đặc điểm không gian và thời gian của thính giác</div>
+        <div class="options">
+            <div class="option correct">b. Quán tính của thính giác, hiệu ứng hai tai, hiệu ứng stereo</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 37: Ngưỡng vi sai theo tần số phụ thuộc</div>
+        <div class="options">
+            <div class="option correct">b. Tần số ban đầu</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 38: Đặc điểm của hiệu ứng che lấp</div>
+        <div class="options">
+            <div class="option correct">a. Không đối xứng</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+Câu 39: Hiện nay, việc xử lý và lưu trữ các tín hiệu âm thanh thường được thực hiện theo phương  pháp nào?</div>
+        <div class="options">
+            <div class="option correct">d. Kỹ thuật số</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 40:  Để tín hiệu số hóa không  gây méo và hồi phục lại trọng vẹn tín hiệu tương tự ban đầu, lấy mẫu phải tuân theo</div>
+        <div class="options">
+            <div class="option correct">c. Định luật Shannon và Nyquist</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            Câu 41: Mục đích của việc lọc thông thấp tín hiệu vào trước khi lấy mẫu</div>
+        <div class="options">
+            <div class="option correct">c. Tránh chồng phổ</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            
+Câu 42: Tấn số lấy mẫu fs  theo định luật Shannon và Nyquist</div>
+        <div class="options">
+            <div class="option correct">b. Tần số fs >= 2fmax</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            
+
+            Câu 43: Việc tần số lấy mẫu theo định luật Shannon và Nyquist nhằm mục đích</div>
+        <div class="options">
+            <div class="option correct">a. Tránh việc tín hiệu sau khi phục hồi bị méo nghiêm trọng</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            
+            Câu 44: Phát biểu nào sau đây là đúng</div>
+        <div class="options">
+            <div class="option correct">a. Số bit lượng tử càng lớn thì số mức lượng tử càng nhiều, chuyển đổi A/D càng chính xác</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            
+            Câu 45: Biên độ được chia các mức tại mỗi mẫu được gọi là</div>
+        <div class="options">
+            <div class="option correct">d. Mức lượng tử</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">
+            
+            Câu 46: Khoảng cách giữa hai mức lượng tử liền kề được gọi là</div>
+        <div class="options">
+            <div class="option correct">a. Bước lượng tử</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">        
+Câu 47: Lỗi lượng tử là?</div>
+        <div class="options">
+            <div class="option correct">c. Sự sai lệch giữa giá trị tương tự tại các mẫu và các mức lượng tử được chọn</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">        
+
+            Câu 48: Phát biểu nào sau đây là đúng</div>
+        <div class="options">
+            <div class="option correct">a. Tại thời điểm lấy mẫu, giá trị biên độ càng gần với mức lượng tử thì lỗi lượng tử càng bé</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">        
+
+            Câu 49: Lượng tử hóa tuyến tính là?</div>
+        <div class="options">
+            <div class="option correct">c. Các bước lượng tử bằng nhau, mỗi giá trị mẫu cùng một giá trị nhị phân có độ dài từ mã như nhau</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">        
+
+            
+Câu 50: Lượng tử hóa phi tuyến?</div>
+        <div class="options">
+            <div class="option correct">c. Các bước lượng tử ứng với các mức tín hiệu không đều nhau</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">        
+
+            Câu 51: Trong tín hiệu số nhị phân, tín hiệu tương tự được chuyển đổi thành?</div>
+        <div class="options">
+            <div class="option correct">d. Chuỗi số liệu 1 và 0</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> Câu 52: Mục đích của mã hóa kênh?</div>
+        <div class="options">
+            <div class="option correct">d. Tất cả các phương án trên</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> Câu 53: Hai dạng mã thường sử dụng trong kỹ thuật audio số?</div>
+        <div class="options">
+            <div class="option correct">c. NRZ và BPM</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+            Câu 54: Phương pháp ghép kênh thường sử dụng trong kỹ thuật audio số?</div>
+        <div class="options">
+            <div class="option correct">a. Ghép kênh theo thời gian</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+            
+Câu 55: Phổ màu của ánh sáng?</div>
+        <div class="options">
+            <div class="option correct">a. Là phổ liên tục từ màu này chuyển dần qua màu khác không có ranh giới rõ ràng</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">  
+            Câu 56: Màu sắc?</div>
+        <div class="options">
+            <div class="option correct">c. Là thuộc tính dao động của dao động điện từ mà mắt người cảm nhận được</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">  
+Câu 57: Lý do tạo nên cảm giác màu khác nhau trong mắt người?</div>
+        <div class="options">
+            <div class="option correct">b. Tần số khác nhau của những chùm tia sáng</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">  Câu 58: Nguyên lý chuyển đổi ảnh quang thành tín hiệu điện?</div>
+        <div class="options">
+            <div class="option correct">d. Dựa trên cơ sở lần lượt chuyển đổi độ chói của các phần tử ảnh thành tín hiệu điện</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+            Câu 59: Chuẩn TV PAL sử dụng bao nhiêu dòng trong một khung?</div>
+        <div class="options">
+            <div class="option correct">c. PAL có 625 dòng đối với 1 khung</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+            Câu 60: Chuẩn PAL?</div>
+        <div class="options">
+            <div class="option correct">a. Là chuẩn cho hệ truyền hình màu</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question"> 
+            Câu 61: Hệ thống truyền hình màu NTSC</div>
+        <div class="options">
+            <div class="option correct">a. Ra đời tại Mỹ</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">  
+            Câu 62:  Lumen là đơn vị đo?</div>
+        <div class="options">
+            <div class="option correct">c. Quang thông</div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="question">  Câu 63: Candela là đơn vị đo của?</div>
+        <div class="options">
+            <div class="option correct">b. Cường độ sáng</div>
+        </div>
+    </div>
 </body>
 </html>
